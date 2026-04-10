@@ -1,0 +1,100 @@
+Problems:
+---------
+#1. Using Arithmetic operators, Implement the following formula.
+		d, m , Y = 10, 3, 2026
+		
+		Based on value Y --> c = 20, y = 26
+		
+	Print the w(week) value.
+	
+#2. Using  bitwise operators 
+	a. Check whether given bit position in a number is ON or OFF
+		for example:
+		------------
+			num = 10, pos = 1
+			Bit representation -->  1010 
+									0010  AND
+								------------
+									0010  --> Non Zero --> ON 
+								------------ 
+											if Zero --> OFF
+											
+	b. Toggle the bit position in a given number and print the number before and after the operation.
+		for example:
+		------------
+			num = 10, pos = 1
+				Before Bit representation -->  1010 --> 10
+				After Bit representation -->  1000 --> 8
+
+	c. Toggle the bits in the nibble based on the bit position in a given number and print the number before and after the operation.
+		for example:
+		------------
+		0000 0000 0000 0000 0000 0000 0000 0000
+		
+		1.	num = 10, pos = 1
+				Before Bit representation --> 0000 1010 --> 10
+				After Bit representation -->  0000 0101 --> 5
+				
+		2.  num = 10 , pos = 4
+				0000 1010 --> 10 --> Number before toggling
+				1111 1010 --> 250 --> Number before toggling
+
+Problem #3:
+-----------
+	Accept 3 number, print the smallest and largest number among these numbers.
+
+Problem #4:
+-----------
+	Accept a year, check whether the given year is leap or not.
+
+Problem #5:
+-----------
+	Accept a number, print whether the number is positive, negative or zero
+	
+Problem #6:
+-----------	
+	Accept a number, print the number with proper suffix.
+	For example:
+		Enter a num: 1
+		output: 1st
+		
+		Enter a num: 10
+		output: 10th
+		
+		Enter a num: 11
+		output: 11th
+		
+Problem #7:
+-----------	
+	Find the sum of all numbers which are divisible by 5 and 7 but not both below 1 million.
+	
+Problem #8:
+-----------
+	Take 2 numbers, print the multiplication of these two numbers by using Russian Peasant method.
+	
+	for example:
+		Enter first number: 12
+		Enter second number: 13
+		Output:
+			first 		second 		result
+			12			13			0 --> check if first number is even/odd
+			6			26			0  --> if Odd, add second number to result
+			3			52			0 + 52  --> divide first number by 2
+			1		   104			52 + 104 --> multiply second number by 2
+			Print Result	-->156  --> until first number is greater than 0
+									  
+Problem #9:
+-----------
+	Check whether a given number is prime or not?
+	
+Problem #10:
+-----------
+	Print 1 to 30 in the given format where w is 3
+	
+	Su Mo Tu We Th Fr Sa
+             1  2  3  4
+    5  6  7  8  9 10 11
+   12 13 14 15 16 17 18
+   19 20 21 22 23 24 25
+   26 27 28 29 30
+   
