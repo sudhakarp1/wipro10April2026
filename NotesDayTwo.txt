@@ -1,0 +1,193 @@
+Day 2: 11-April-2026
+--------------------
+To be continued...
+	Understanding break, continue, and pass statements
+	
+	keywords that can be used in a loop:
+		break: to break or come out of the loop immediately
+		continue: to skip the current iteration in a loop 
+		pass: to no statements or empty block in a loop/condition or function
+		else: If none of the statements in the loop is executed, else block will execute
+=========================================================================
+Next Topic:
+-----------
+Data Structure in Python
+	List, Tuple, Dictionary, Set (Accessing, Updating, Slicing)
+	Understanding lists, tuples, dictionaries, and sets
+	Accessing and updating elements
+	Slicing data structures
+	Adding and Deleting Elements
+	Methods to add and remove elements
+	Working with For Loops
+	Iterating over data structures
+	Usage of ‘in’ Keyword
+	Checking membership using ‘in’
+=========================================================================
+	In any Language, Data structure means structuring your data. Data structures are used to store and organize data efficienty so that it can be accessed and updated easily(with less time). 
+	
+	Python provides built-in data structures in addition to create user-defined data-structures.
+	
+	
+	Built-in Data-structures provided in Python are:
+		1. List 
+		2. Tuple 
+		3. Set 
+		4. Dict 
+		
+		Each of the above data-structures are denoted by a bracket. for example list is represented by [], tuple by (), set and dict by {}.
+		
+		lstVar = []
+		or 
+		var = [] --> an empty list is created.
+		
+	1. List:
+		List is a data structure that is indexed, ordered and mutable.
+		List can store mixed types of data.
+		
+		indexed means, you can use [] for accessing individual elements.
+		
+		Commonly used Methods of List data-structure.
+		---------------------------------------------
+			Here element represents individual data stored in your data structure.
+			
+				append(element) --> add element at the end 
+				insert(pos, element) --> insert element at pos 
+				extend(iterable) --> adds elements from collection 
+				
+				remove(element) --> removes first occurrence from element
+				pop([pos]) --> removes and returns element at pos (default last element)				
+				
+				index(element) -->returns first index of element 
+				count(element) --> returns count of element 
+				
+				sort()	--> sorts list in place
+				reverse() --> Reverses list in place 
+				copy() --> returns a shallow copy 
+				clear() 	--> Removes all elements 
+=========================================================================
+Problem #1:
+	Part a. Create an empty list, accept first element from the user. fill the next 99 elements into the list using append so your list has 100 element from the given number.
+	For example:
+		Enter the first element: 101
+		Output:	101, 102, 103, 104, ... 199
+		
+	Part b.
+		Check each element from the above list, if the element is prime leave it as it is else make it zero. (At the end of the operation, the list contains prime numbers and zeroes)
+		
+		Output:
+			101, 0, 103, 0, 0, 0, 107, 0, ... 
+	
+	Part c:
+		Find the max count of consecutive zeroes between two prime numbers in the list.
+		output:
+			13 zeroes between 113 and 127 
+======================================================================
+Nesting of Loops:
+-----------------
+	Writing one loop inside another is referred to as nesting of loops.
+	
+	There can be any number of levels of nesting.
+	
+	for 
+		for 
+		
+		
+	while 
+		while 
+
+	while 
+		for 
+	
+	for 
+		while 
+=================================================
+	
+	for 
+		for 
+		
+		for 
+		
+		for 
+		
+		for 
+		
+
+	1 2 3 4
+	5 6 7 8
+	9 10 11 12
+	
+	-->	1 2 3 4 8 12 11 10 9 5 6 7
+		
+=============================================================
+1. Traditionally, Nesting of loops is used when there is processing of table or tabular data. Like row and column wise.
+	Examples in matrix related problems, 2 Dimensional strings.
+	
+	For indexing the elements stored in matrix.
+
+	Other than that there are many logic building problems where tabular output is generated.
+	
+Problem #2:
+	Accept a number: 10
+	
+		10  11  12  13  14  15  16  17  18  19
+	10  100 110 120 130 140 150 160 170 180 190
+	11  110 121 132 143 154
+	12
+	13
+	.
+	.
+	19
+	
+Problem #3:
+	Accept a number from the user. Print first 25 prime number from the given number.
+	
+	Enter a num: 100
+	101 103 107 109 ... 
+	
+Problem #4:
+	Print first 8 Mersenne Prime numbers.
+	Mesenne number: number while is 2 ** n - 1 
+		1, 3, 7, 15, 31, 63, 127, 511, 1023, 2047..
+
+Puzzle:
+	Greedy Daughters Problem
+	A farmer has 3 Daughters
+	X number of mangoes
+		1st Daughter eats 1 divides the remaining X - 1 // 3
+		2nd Daughter eats 1 divides the remaining X - 1 // 3
+		3rd Daughter eats 1 divides the remaining X - 1 // 3
+		Father distributes remaining equally to 3 Daughters
+		
+	for Example:
+		25 Mangoes 
+			1st Daughter takes 1  - 24 //3 --> 1 + 8 --> 16 remaining 
+			2nd Daughter takes 1  - 15 //3 --> 1 + 5 --> 10 remaining 
+			3rd Daughter takes 1  - 9 //3 --> 1 + 3 --> 6 remaining 
+			Father distributes 6 // 3 --> 2 mangoes each 
+------------------------------------------------------------------------
+	Print first 5 such scenarios where the number 
+			
+Next Topic:
+-----------
+	Remember, we were discussing on Nesting of loops and prior to that, introduction to data structures.
+	
+	list of lists: kind of mimicing the data stored as matrix.
+	
+	[[1,2,3], [4,5,6],[7,8,9], [10,11,12]] --> 4 X 3
+	
+Problem #5:
+	Create a zero matrix based on the row and col size given by the user.
+	
+Problem #6:
+	Create a matrix based on the row and col size given by the user and print the data in spiral order.
+	
+Problem #7:
+	Create an odd square matrix and fill the elements in such a way were sum o each row, column and diagonal elements are same. (Also referred to as magic matrix)
+	
+	Algorithm:
+		1. start with mid column on top row. 
+		2. If curr pos is on top row -> go to bottom row + 1 column 
+		3. If on right most column -> got to first colum -1 row 
+		4. if right diagonal position is free --> fill It 
+		5. None of the above conditions got down one row 
+=========================================================================	

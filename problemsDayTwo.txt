@@ -1,0 +1,74 @@
+Problem #1:
+	Part a. Create an empty list, accept first element from the user. fill the next 99 elements into the list using append so your list has 100 element from the given number.
+	For example:
+		Enter the first element: 101
+		Output:	101, 102, 103, 104, ... 199
+		
+	Part b.
+		Check each element from the above list, if the element is prime leave it as it is else make it zero. (At the end of the operation, the list contains prime numbers and zeroes)
+		
+		Output:
+			101, 0, 103, 0, 0, 0, 107, 0, ... 
+	
+	Part c:
+		Find the max count of consecutive zeroes between two prime numbers in the list.
+		output:
+			13 zeroes between 113 and 127 
+
+Problem #2:
+	Accept a number: 10
+	
+		10  11  12  13  14  15  16  17  18  19
+	10  100 110 120 130 140 150 160 170 180 190
+	11  110 121 132 143 154
+	12
+	13
+	.
+	.
+	19
+	
+Problem #3:
+	Accept a number from the user. Print first 25 prime number from the given number.
+	
+	Enter a num: 100
+	101 103 107 109 ... 
+	
+Problem #4:
+	Print first 8 Mersenne Prime numbers.
+	Mesenne number: number while is 2 ** n - 1 
+		1, 3, 7, 15, 31, 63, 127, 511, 1023, 2047..
+
+Puzzle:
+	Greedy Daughters Problem
+	A farmer has 3 Daughters
+	X number of mangoes
+		1st Daughter eats 1 divides the remaining X - 1 // 3
+		2nd Daughter eats 1 divides the remaining X - 1 // 3
+		3rd Daughter eats 1 divides the remaining X - 1 // 3
+		Father distributes remaining equally to 3 Daughters
+		
+	for Example:
+		25 Mangoes 
+			1st Daughter takes 1  - 24 //3 --> 1 + 8 --> 16 remaining 
+			2nd Daughter takes 1  - 15 //3 --> 1 + 5 --> 10 remaining 
+			3rd Daughter takes 1  - 9 //3 --> 1 + 3 --> 6 remaining 
+			Father distributes 6 // 3 --> 2 mangoes each 
+
+------------------------------------------------------------------------
+	Print first 5 such scenarios where the number 
+	
+Problem #5:
+	Create a zero matrix based on the row and col size given by the user.
+	
+Problem #6:
+	Create a matrix based on the row and col size given by the user and print the data in spiral order.
+	
+Problem #7:
+	Create an odd square matrix and fill the elements in such a way were sum o each row, column and diagonal elements are same. (Also referred to as magic matrix)
+	
+	Algorithm:
+		1. start with mid column on top row. 
+		2. If curr pos is on top row -> go to bottom row + 1 column 
+		3. If on right most column -> got to first colum -1 row 
+		4. if right diagonal position is free --> fill It 
+		5. None of the above conditions got down one row 
