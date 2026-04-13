@@ -1,0 +1,68 @@
+Problem #1:
+-----------
+	Word counter:
+		Count occurrences of each word in a sentence
+	sentence = 'This is just a lenghty string. This is a test string'
+	
+Problem #2:
+-----------
+	Character counter:
+		Count occurrences of each character in a sentence
+	sentence = 'This is just a lenghty string. This is a test string'
+	
+problem #3:
+-----------
+	Group by:
+
+	# Task: Given a list of tuples (course, student), group students by course.
+	data = [('Math', 'Bobby'), ('Science', 'Bablu'), ('Math', 'Pinkie'), ('Math','Ram'),('Science', 'Chintu')]
+
+	# Expected:
+	# {
+	#     'Math': {'Bobby', 'Pinkie', 'Ram'},
+	#     'Science': {'Bablu', 'Chintu'}
+	# }
+problem #4:
+----------
+	words = {'one':1, 'two':2 ... 'twenty':20, 'thirty':30, 'forty':40, 'fifty':50, 'sixty':60, 'seventy':70, 'eighty':80, 'ninety':90, 'hundred':100, 'thousand':1000, 'lakhs':100000, 'crores':10000000}
+	
+	Input: fifty eight crores ninety seven lakhs thirty four thousand twenty one
+	Output: 589734021
+	
+	inputStr.split() --> list of words 
+		if num <100:
+			addition 
+		else:
+			multiplication and add it to result
+
+	3 and 100 --> 3 * 100 --> 300
+	
+	90 and 9 --> 90 + 9 --> 99
+=================================================================
+Problem #5:	Reverse Words in Sentence
+	Input: 'This is a lenghty string'
+	Output: 'string lenghty a is This'
+=========================================================
+My Solution:	
+	Input = 'This is a lenghty string'
+	print(' '.join(Input.split()[::-1]))
+==========================================================
+Problem #6: Check Valid Palindrome (Ignore Non-Alphanumeric)
+	Input: 'A man, a plan, a canal: Panama'
+	Output: True
+
+Problem #7: Rearrange String Without Adjacent Duplicates
+	Input: 'aab'
+	Output: 'aba'
+
+	Return empty string if not possible
+
+Problem #8: Custom atoi() Implementation
+	Input: '   -42abc'
+	Output: -42
+
+	Should Handle:
+		whitespace
+		sign
+		invalid chars
+

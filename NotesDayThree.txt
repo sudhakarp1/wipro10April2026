@@ -1,0 +1,193 @@
+Notes Day 3: 13-April-2026
+--------------------------
+	for example In a odd square matrix:
+	
+		if num starts with 1 --> matrix ends with row * row as last number
+		
+		what if num starts with something else like say 11
+		
+		then last element should be 
+			num + row * row - 1 ---> 11 + 9 - 1 --> 19 for 3 X 3 matrix 
+			num + row * row - 1 ---> 11 + 25 - 1 --> 35 for 5 X 5 matrix 
+		
+	Similarly		
+		sum of each row --> (first + last) //2 * row 
+						--> (1 + 9) // 2 * row 
+							5 * 3 --> 15 for 3 X 3 matrix
+						--> (1 + 25)//2 * 5 
+						-->  13 * 5 --> 65 for 5 X 5 matrix
+	
+  27  34  11  18  25
+  33  15  17  24  26
+  14  16  23  30  32
+  20  22  29  31  13
+  21  28  35  12  19						
+=============================================================
+list indexing:
+--------------
+    Indexing --> accessing elements using index --> []
+        index starts with 0
+        slice --> part of the list by specifying the range
+        [start: end: incr] # the end element is not considered
+
+
+	Indexing can be used on Orderd data structures like 
+		list
+		tuple
+		string
+		
+==========================================================================
+Tuple: Similar to lists by are immutable
+	Ordered
+	Immutable
+	allows duplicates
+	
+	
+Most commonly used functions
+
+index(element) --> return index position of the first occurrence of the element
+count(element) --> returns count of the element(data)
+========================================================================
+Set:
+----
+	Unordered (internally uses hashing)
+	Mutable
+	No duplicate elements 
+	Elements must be hashable(immutable type)
+	
+	st = {11,22,33,44,22,33,45}
+	st = set() #--> empty set
+
+	Most commonly used methods:
+	---------------------------
+	add(ele)  	Adds element ele 
+	remove(ele) Removes ele data from the set, error if ele not found  
+	discard(ele) 	Removes ele data from the set, No error if ele not found 
+	pop()	Removes and returns an arbitary element
+	clear()	Empties the set 
+	update(iterable)  Add elements from a collection 
+	union(set2) --> Returns union 
+	intersection(set2) --> returns common elements 
+	difference(set2) --> Returns element in set1 but not in set2 
+	issubset(set2)	--> True if this set1 is subset of set2
+	issuperset(set2) --> True if set1 is superset of set2
+	
+dict: (Dictionary)
+------------------
+	Unordered (ordered from Python 3.7+)
+	Mutable
+	Key-Value pairs 
+	Keys must by unique and immutable (hashable)
+	
+		dtOne= {'one':1, 'two':2, 'three':3}
+	
+	Commonly used methods:
+	----------------------
+	get(key, defaultValue) 	returns value(if key exists) or defaultValue
+	keys()					returns keys 
+	values()				returns values 
+	items()					return (key, value) pairs)
+	update(dict2)			update with another dictionary 
+	pop(key)		removes key, returns value 
+	popitem()		removes and returns last(key, value)
+	clear()			removes all items 
+	copy()			shallow copy 
+	setdefault(key, value)	Returns value if key exist, else sets value to key
+	
+Problem #1:
+-----------
+	Word counter:
+		Count occurrences of each word in a sentence
+	sentence = 'This is just a lenghty string. This is a test string'
+	
+Problem #2:
+-----------
+	Character counter:
+		Count occurrences of each character in a sentence
+	sentence = 'This is just a lenghty string. This is a test string'
+	
+problem #3:
+-----------
+	Group by:
+
+	# Task: Given a list of tuples (course, student), group students by course.
+	data = [('Math', 'Bobby'), ('Science', 'Bablu'), ('Math', 'Pinkie'), ('Math','Ram'),('Science', 'Chintu')]
+
+	# Expected:
+	# {
+	#     'Math': {'Bobby', 'Pinkie', 'Ram'},
+	#     'Science': {'Bablu', 'Chintu'}
+	# }
+problem #4:
+----------
+	words = {'one':1, 'two':2 ... 'twenty':20, 'thirty':30, 'forty':40, 'fifty':50, 'sixty':60, 'seventy':70, 'eighty':80, 'ninety':90, 'hundred':100, 'thousand':1000, 'lakhs':100000, 'crores':10000000}
+	
+	Input: fifty eight crores ninety seven lakhs thirty four thousand twenty one
+	Output: 589734021
+	
+	inputStr.split() --> list of words 
+		if num <100:
+			addition 
+		else:
+			multiplication and add it to result
+
+	3 and 100 --> 3 * 100 --> 300
+	
+	90 and 9 --> 90 + 9 --> 99
+=====================================================================
+Python String
+	Slicing and Formatting Strings
+	Accessing substrings
+	Formatting strings using f-strings and format()
+	Built-in Methods
+	Common string methods like lower(), upper(), split(), join()
+	Common string methods:
+		lower()
+		upper()
+		strip()
+		replace(str1, str2)
+		find(str)
+		split()
+		join(list)
+		startswith()
+		endswith()
+		count(str)	
+	
+Problem #5:	Reverse Words in Sentence
+	Input: 'This is a lenghty string'
+	Output: 'string lenghty a is This'
+=========================================================
+My Solution:	
+	Input = 'This is a lenghty string'
+	print(' '.join(Input.split()[::-1]))
+==========================================================
+Problem #6: Check Valid Palindrome (Ignore Non-Alphanumeric)
+	Input: 'A man, a plan, a canal: Panama'
+	Output: True
+
+Problem #7: Rearrange String Without Adjacent Duplicates
+	Input: 'aab'
+	Output: 'aba'
+
+	Return empty string if not possible
+
+Problem #8: Custom atoi() Implementation
+	Input: '   -42abc'
+	Output: -42
+
+	Should Handle:
+		whitespace
+		sign
+		invalid chars
+==================================================================
+Next Topic:
+	Python Functions
+		Built-In Functions and Range() Functions
+		Understanding built-in functions like len(), type(), str(), int()
+		Generating sequences using range()
+		User Defined Functions
+		Creating functions
+		Understanding parameters and return values
+		Recursive Functions
+======================================================================
+
