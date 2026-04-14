@@ -1,0 +1,187 @@
+Day 4: 14-April-2026
+--------------------
+
+Python Functions
+	Built-In Functions and Range() Functions
+	Understanding built-in functions like len(), type(), str(), int()
+	Generating sequences using range()
+	User Defined Functions
+	Creating functions
+	Understanding parameters and return values
+	Recursive Functions
+==============================================================
+Functions:
+	What is a program?
+		Set of instructions to solve a problem.
+		
+	Have you heard of sub-program?
+		A problem is divided into sub-problems, where solving sub-problems individually you tend to solve the problem. 
+		
+		Here if you observe, the problem is the program and the sub-programs are achieved by using functions
+		
+		The Mechanism for achieving sub-programs is through function in languages like C/C++/Java/Python.
+		
+	Functions played a part of procedural/functional programming language. where it helped in organizing you bigger programs/project.
+========================================================================
+Some of the built-in functions?
+==============================	
+	Built-In Functions and Range() Functions
+		range(start, end, incr/decr)
+		
+	Understanding built-in functions like len(), type(), str(), int()
+	
+	res = int('123')
+	
+	
+	characters --> ASCII
+	
+Problem #1:
+		Update the given convert function which can work on octal, decimal and hexadecimal 
+		
+		'''
+			strInput = '1234' base = 10
+			'1' 
+			#res = convert('123', 10)
+			#res = convert('123', 8)
+			#res = convert('123abc', 16)
+		'''
+		def convert(strInput, base):
+			res = 0
+			for digit in strInput:  
+				res = res * base  + (ord(digit) - ord('0')) 
+			return res
+
+		res = convert('1234', 10)
+		print(f'res: {res}')
+
+Problem #2: printCalendar.py 
+
+	def isLeap(Year): 
+		pass 
+
+	def monthName(m):
+		pass 
+		
+	def maxDays(month, Year):
+		pass 
+
+	def dayOfWeek(d, m, Y):
+		pass 
+	
+	def printCalendar(m, Y):
+		pass 
+
+Function arguments:
+-------------------
+	1. positional arguments(Parameters)
+	2. Arguments with default values 
+	3. Variable number of args(0 or more arguments).
+	4. Keyword arguments
+
+1. positional arguments(Parameters):
+	def funOne(first,second, third):
+		pass 
+		
+	def funTwo(x,y,z):
+		pass 
+		
+	funOne(100,200,300)
+	funOne('hello', 'how', 'are you')
+	funOne([11,22,33,44], (100,'Name here', 123345.34), 'A lengthy string')
+	
+	funTwo(100,200,300)
+
+2. Function Arguments with default values 
+
+	def funOne(first = 10,second = 20, third = 30):
+		print(f'first: {first}   second: {second}  third: {third}')
+	
+3. Variable number of args(0 or more arguments).
+
+4. Keyword arguments: kwargs
+
+Problem #3:
+	Remember you tried, spiral printing of the matrix. Take matrix as an argument and return the data in a single list in a spiral order.
+
+Program flow control:
+---------------------
+	statement are executed in the order in which it is take from the file
+	
+	def fun(): #function definition 
+		pass 
+		
+	fun() #will call the function 
+	
+	Function calling itself is called recursive function.
+	
+		Direct 
+			fun() --> fun()
+			
+		Indirect 
+			fun() --> funOne() --> fun()
+===================================================================
+Solve some simple problems using recursion.
+	
+Problem #4:
+-----------
+	a. Return the factorial of a given number 
+	b. Write a recursive function to find sum of numbers from 0 to n where n is a given number.
+	c. Write a recursive function to reverse the given string 
+	d. Write a recursive function to reverse the given list
+	e. Write a recursive function to reverse the given number 
+
+
+Next Topic:
+-----------
+Python Modules
+	Built-In Modules
+	Importing and using built-in modules like math, datetime
+	User Defined Modules
+	Creating and importing user-defined modules
+	Setting up Module Path
+	Understanding PYTHONPATH
+	Adding directories to module path
+
+	
+	Python provide a wide range of functionalities from different domains through modules and packgaes.
+	
+	
+	If you observe, Modules in Python is a python file also referred to as script file.
+		
+		So every python script file is a module. This we shall understand when we implement user-defined modules and packages.
+--------------------------------------------------------------------------
+	There are plenty of built-in modules, but we shall start off with some basic modules like math, datatime, os, sys modules
+	
+	math :
+		low level mathematical functions (just like functions from C math library).
+		It includes functions for 
+			Basic arithmatic, trignometry, logarithms, rounding, ceiling, factorial, combination, power and root.
+			It also provides constant like pi, euler constant , inf, nan(not a number)
+			
+			import math 
+			
+			math.function()
+			
+			
+	datetime:	
+		Provides classes to manipulate date, time and timestamps. Used in applications like logging, scheduling ...
+
+
+		import datetime 	
+			datetime.date --> Represents a calendar date (Y, m, d)
+			datetime.time --> Represents time of a day (H,M, S, ms)
+			
+	sys:
+		provides access to variables, functions and objects to interact closely with the Python Interpreter
+			--> handling command line argument (sys.argv)
+			--> handling path (sys.path)
+			--> interaction with interpreter
+			--> accessing system level info 
+			--> exiting programs (sys.exit(num))
+			
+			
+			
+			
+	
+	
+	
