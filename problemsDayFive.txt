@@ -1,0 +1,52 @@
+Organize your gitlab in this structure for all your modules.
+===========================================================
+Create separate folders for each module 
+	Linux
+	SQL 
+	Datastructures with Python 
+		dayOne
+			assignments 
+			classNotes
+				examples
+				notes
+		dayTwo
+			assignments 
+			classNotes
+				examples
+				notes				
+				
+		dayThree
+			assignments 
+			classNotes
+				examples
+				notes				
+
+Problem #1:
+-----------
+Implement a package named numlib with the following structure given below
+
+		numlib/			--> Package directory
+		|
+		|-- __init__.py 	#this makes this folder a package(Python 3.0-)	
+		|-- numOps.py 
+		|-- bitOps.py 	
+		|-- puzzles/   --> sub-package
+			|-- __init__.py	
+			|-- RussianPeasant.py  #sub modules 
+			|-- GreedyDaughters.py		
+			
+Problem #2:
+-----------
+	Update your atoi() /convert() function to include exceptions in your code for invalid literals and validate the same.
+	
+Problem #3:
+-----------
+	Write the following usingModules for the following modules where input data is given through command line arguments handled using argv list from sys module.
+		a. bitOps.py --> usingBitOps.py 10 2 3
+		b. numOps.py --> usingNumOps.py 100 102
+		c. ListOps.py --> usingListOps.py 100 3 4 1  --> first number for 1D and second number onwards for matrix problems where 3 X 4 matrix and num is starting from 1
+		
+		
+		
+	
+	

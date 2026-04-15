@@ -1,0 +1,181 @@
+Day 5: 15-April-2026
+--------------------
+	Creating and importing user-defined modules
+	Setting up Module Path
+	Understanding PYTHONPATH
+	Adding directories to module path
+	
+Python Packages
+	Built-In Packages
+	Importing and using built-in packages like os, sys
+	User Defined Packages
+	Creating and importing user-defined packages
+	Setting up Package Path
+	Understanding package structure
+	Adding directories to package path	
+
+Python Exception Handling
+	Exception Handling
+	Understanding exceptions
+	Using try, except, finally blocks
+	User Defined Packages
+	Creating and using user-defined exceptions
+	
+Python Command Line Arguments
+	Usage of Command Line Arguments
+	Accessing command line arguments using sys.argv
+	Parsing command line arguments using argparse module
+	
+Python File Handling
+	Opening and Closing File Handle
+	Opening files using open()
+	Closing files using close()
+	File Handling Operations
+	Reading and writing files
+	Understanding file modes
+	Creating/Deleting Files and Folders
+	Using os module to work with files and directories
+==========================================================================
+Python Packages:
+----------------
+	A package in Python is a way to organize related modules(python files) into a directory(folder in windows) hierarchy. It helps structure your project(Code) and allows for modular design and re-use.
+	
+		In Simple terms, a package is a folder that contains a special __init__.py file and one or more Python modules (.py files)
+		
+	Package Structure:
+	------------------
+		Imagine I have a package named numlib:
+			
+		numlib/			--> Package directory
+		|
+		|-- __init__.py 	#this makes this folder a package(Python 3.0-)	
+		|-- numOps.py 
+		|-- bitOps.py 	
+		|-- puzzles/   --> sub-package
+			|-- __init__.py	
+			|-- RussianPeasant.py  #sub modules 
+			|-- GreedyDaughters.py		
+			
+		From the above structure:
+		-------------------------
+			1. sub-packages --> Folders within package, each with its own __init__.py 
+			2. modules --> .py files containing classes, functions or data 
+			3. __init__.py --> can be empty or used to initialize the package by using import modules, define export or initialize the package.
+=====================================================================
+Built-In Packages:
+------------------
+	os module in Python provides a way to interact with os(operating system), it is part of Python's standard library and offers rich set of functions to handle files, directories, manage system variables like environment and interact with os(os commands can be executed).
+	
+	file Operations:
+		os.remove(path) --> Deletes the specified file 
+		os.unlink(path) --> Deletes the specified file or symbolic link
+		os.rename(old, new) --> Renames a file or directory
+		os.replace(old, new) --> Renames and replaces file or directory if exists
+	
+	Directory Operations:
+		os.getcwd() --> returns current working directory path 
+		os.chdir() --> changes the CWD to the specified path 
+		os.listdir(path='.') : lists the files and directories
+		os.makedir(name, mode=0o777) --> creates a new folder/directory
+		os.makedirs(name, exist_ok=False) --> creates directory recursively
+		os.rmdir(path) --> removes an empty directory
+		os.removedirs(name) --> removes directory recursively
+		
+	Path manipulation:
+		os.path.join(path, *paths) --> joins multiple path components into a single path 
+		
+		os.path.exists(path) --> true if file/directory exists 
+		os.path.isabs(path) --> true if absolute path 
+		path = 'D:\wipro10April2026' --> Absolute path 
+				'.' --> Relative path 
+		os.path.isdir(path) --> true if the path is directory
+		os.path.isfile(path) --> true if the path is file
+		
+	Environment variables:
+		os.environ['variableName'] --> display
+		os.environ['variableName'] = 'new Value' --> setting new value 
+		os.pop('variableName') --> Removes environment variableName
+		
+	OS Information:
+		os.name 
+=====================================================================
+1. Create separate folders for each module 
+	Linux
+	SQL 
+	Datastructures with Python 
+		dayOne
+			assignments 
+			classNotes
+				examples
+				notes
+		dayTwo
+			assignments 
+			classNotes
+				examples
+				notes				
+				
+		dayThree
+			assignments 
+			classNotes
+				examples
+				notes				
+	
+======================================================================
+
+Next Topic:
+-----------
+Python Exception Handling
+	Exception Handling
+	Understanding exceptions
+	Using try, except, finally blocks
+	User Defined Packages
+	Creating and using user-defined exceptions
+======================================================================
+Exceptions:
+	Exception are run-time scenarios(Errors) where your program crashes when an exception is raised.
+	
+	Exception handling in Python is a mechanism to manage run-time error gracefully, ensuring that the program continues to run or exits cleanly without abrupt termination.
+	
+	Python provides a structured approach in support for exception handling with the following keywords:
+		try , except block , raise, else, finally 
+		
+		1. try...except block	
+			: try block inside which contains the code that might raise an exception 
+			: except block specifies the handler. Specifies the action to take when a specific exception occurs. We can have multiple except blocks to a single try block. Multiple except blocks can handle different exceptions 	
+		2. raise: used for raising exceptions in user-defined code(functions or methods in Classes)
+		3. else: Optional block: Executes if no exceptions are raised in the try block. 
+		4. finally: Optional block: Contains cleanup code that runs no matter what, Whether an exception occurs or not.
+		
+	Let us explore with some examples.	
+	
+	1. Exceptions in Python are objects derived from BaseException class.
+	2. Even commonly occurring exceptions like ValueError, TypeError, ZeroDivisionError, FileNotFoundError, ModuleNotFoundError are all inherited from Exception which in turn in inherited from BaseException class. 
+	3. You can also include this mechanism by using raise statement to raise exception from your code. 
+	4. You can create custom(user-defined) exception  by inheriting from Exception class which we will discuss later after classes and object (OOP) topic
+	
+Python Command Line Arguments
+	Usage of Command Line Arguments
+	Accessing command line arguments using sys.argv
+======================================================================
+Problem #2:
+-----------
+	Update your atoi() /convert() function to include exceptions in your code for invalid literals and validate the same.
+	
+Problem #3:
+-----------
+	Write the following usingModules for the following modules where input data is given through command line arguments handled using argv list from sys module.
+		bitOps.py --> usingBitOps.py 10 2 3
+		numOps.py --> usingNumOps.py 100 102
+		ListOps.py --> usingListOps.py 100 3 4 1  --> first number for 1D and second number onwards for matrix problems where 3 X 4 matrix and num is starting from 1
+		
+=======================================================================
+	
+Next Topic:
+	Parsing command line arguments using argparse module
+
+	
+
+
+
+
+
