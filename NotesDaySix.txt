@@ -1,0 +1,268 @@
+Day 6: 16-April-2026
+--------------------
+Next Topic:
+	Parsing command line arguments using argparse module
+	
+	Python File Handling
+		Opening and Closing File Handle
+		Opening files using open()
+		Closing files using close()
+		File Handling Operations
+		Reading and writing files
+		Understanding file modes
+		Creating/Deleting Files and Folders
+		Using os module to work with files and directories
+		
+	Class and Objects
+		Creating Class
+		Understanding classes and objects
+			Defining classes
+			Instantiating Objects
+			Creating objects
+		Accessing object attributes and methods
+		Different Types of Variables & Methods
+			Understanding instance, class, and static variables
+			Defining instance, class, and static methods
+		Magic/Dunder Methods
+			Understanding magic methods like init, str
+		Inheritance & Polymorphism
+			Implementing inheritance
+			Understanding polymorphism
+		Logging & Debugging Techniques
+			Using logging module
+		Debugging Python programs
+		Error Handling & Exception Strategies
+			Handling exceptions
+			Creating custom exceptions
+	
+	Regular Expression
+		Pattern Matching , Flags
+		Using re module for pattern matching
+		Understanding regex flags
+		Match(), Search(), Finditer()
+		Finding matches using match(), search(), finditer()
+		Findall(), Split()
+		Using findall() for getting all matches
+		Splitting strings using split()
+		Group(), Start(), End() &
+		Working with match objects
+			Using group(), start(), end()
+		Span()
+			Understanding span of match
+==========================================================
+Comprehension, Iterators, Generator, Decorators , Lambda function
+	List Comprehensions
+	Creating lists using list comprehensions
+	Iterator and Generators
+	Understanding iterators and generators
+	Creating iterators and generators
+	Decorator
+	Understanding decorators
+	Creating and using decorators
+	Lambda function- map(), reduce() filter()
+	Understanding lambda functions
+	Using lambda functions with map(), reduce(), filter()
+==========================================================================
+special file names/objects ...
+	These things will be discussed after file handling 
+				
+Problem #1:
+-----------		
+	for the time being implement expr version for handling of command line arguments using sys.argv 
+		python exprt.py 10 + 20
+		python exprt.py 10 - 20
+		python exprt.py 10 * 20
+		python exprt.py 10 / 20
+		python exprt.py 10 // 20
+		python exprt.py 10 % 20
+==========================================================================
+Parsing command line arguments using argparse module:
+-----------------------------------------------------
+	the argparse module provides a more powerful and user-friendly to handle command line arguments.
+	some of the features:
+		1. Automatic help messages (using -h or --help)
+		2. Type enforcement (e.g., type=int)
+		3. Default values, optional arguments, flags, choices/options.
+============================================================================
+Python File Handling
+	Opening and Closing File Handle
+	Opening files using open()
+	Closing files using close()
+	File Handling Operations
+		Reading and writing files
+		Understanding file modes
+		Creating/Deleting Files and Folders
+		Using os module to work with files and directories
+----------------------------------------------------------------------------
+File Handling:
+--------------
+	The data stored in the file is always in secondary storage devices. Your program's variables(data) are stored in main memory, so the instruction in your program can access data in main memory only.
+	
+	So the data from file(secondary storage), has to be loaded into the main memory --> this is what your open() does.
+	and similary the data in your memory has to be written back to the secondary storage --> this is done by close() 
+	
+	open() return a file object which in turn can be used to call methods.
+	fObj = open(filename, mode)
+		filename --> path either absolute or relative path
+		mode --> whether read(r), write(w) or append(a)
+			fobj = open('fileName.py', 'r')
+			text = fobj.read() #all the contents from file 
+			text --> string variable containing the contents of the file(whole).
+				fobj.readline() --> one line content is read 
+				fobj.readlines() --> all the lines are stored in a list 
+				
+Remember we discussed on sys module:
+	These are special file objects, using which we can interact with keyboard and terminal --> console
+	
+		sys.stdin --> input from keyboard
+		sys.stdout --> output to the terminal
+		sys.stderr --> output to the terminal
+	
+Problem #2:
+-----------			
+	Write a python program which works like a basic cat command 
+		cat enter -->
+			Input from keyboard and output on the screen 
+		cat filename -->
+			input from the file and output on the screen 
+		cat -n filename -->
+			input from the file and output on the screen along the line numbers.
+
+Problem #3:
+-----------			
+	Extend problem#2 so it can handle multiple files.
+	
+	Write a python program which works like a basic cat command 
+		cat filename file2 file3--> prints files one by one.
+		cat -n filename file2 file3-->
+			input from the multiple files and output on the screen along the line numbers.
+
+Problem #4:
+-----------			
+	Write a python program which works like a wc(word count) command. Just like cat command if no file name is given, read input from keyboard 
+		wc file 
+		line# word# char#  file
+		wc -l file 
+		line# file
+		wc -w file 
+		word# file
+		wc -c file 
+		char# file
+		
+Problem #5:
+-----------
+	Extend the problem #4 to handle multiple files 
+	wc output.txt simp.txt testOne.py
+	1   5  28 output.txt
+	7  33 221 simp.txt
+	9  22 264 testOne.py
+	17  60 513 total	
+	
+	===============================================
+	open modes:
+		'r' --> read only mode 
+		'w' --> write only mode(Truncate)
+		'a' --> write only mode(Append)
+
+		'r+' --> read+write mode and perform write after reading..
+		'w+' --> write +read mode(Truncate--> previous contents are erased)
+		'a+' --> write +read mode(Append (previous content is retained))
+
+		By default - Text mode 
+			'rb' --> read & binary mode 
+			'wb' --> write & binary mode(Truncate)
+			'ab' --> write & binary mode(Append)
+			
+Participants presenting Tomorrow:
+---------------------------------
+1. Sreeram Sagar
+2. Nikesh Naidu
+3. B Meghana Reddy
+4. Y. Narasimha 
+5. Marke Upendra
+6. K. Kavyasri
+7. Dhurai Raj
+8. P Bhanuprakash		
+---------------------------------------------------------------------------
+Problem #6:
+-----------
+	Write a Python program where, you pass commands as command line arguments using argparse which perform the following file handling operations 
+	
+	Python fileOps.py cfolder foldername --> creates a folder 
+	Python fileOps.py cfile filename --> creates a  file
+	Python fileOps.py rename filename/folder --> renames a file/folder
+	Python fileOps.py delete filename/folder --> removes a file/folder
+	Python fileOps.py copy filename/folder --> copies a file/folder
+==========================================================================
+	Class and Objects
+		Creating Class
+		Understanding classes and objects
+			Defining classes
+			Instantiating Objects
+			Creating objects
+		Accessing object attributes and methods
+		Different Types of Variables & Methods
+			Understanding instance, class, and static variables
+			Defining instance, class, and static methods
+		Magic/Dunder Methods
+			Understanding magic methods like init, str
+		Inheritance & Polymorphism
+			Implementing inheritance
+			Understanding polymorphism
+		Logging & Debugging Techniques
+			Using logging module
+		Debugging Python programs
+		Error Handling & Exception Strategies
+			Handling exceptions
+			Creating custom exceptions
+==========================================================================
+	Programming Paradigms:
+	----------------------
+		1. Earlier days :
+			batch process was done --> scripting languages were born.
+				shell scripting in UNIX or UNIX like OS(Linux, mac)
+				
+		2. Procedural Oriented Programming:
+			also called as functional oriented programming.
+				C language, Pascal 
+				
+		3. Object Oriented Programming:
+			Support for creating objects, extending functionalities using inheritance and achieving run-time polymorphism. 
+			
+	If you observe:
+		Your Python language supports all of the above programming paradigms.
+	
+	Object Oriented Programming (OOP) is a programming paradigm based on the concepts of objects which brings (bundles) attributes (data) and behaviour (methods) together as a single unit.
+	
+	In order to achieve the above functionality class is used a mechanism to acheive this.
+	
+	In traditional OOP languages:
+		A language is said to support OOP if it provides syntax for the following concepts
+			1. Abstraction 
+			2. Encapsulation
+			3. Inheritance
+			4. Polymorphism
+			
+			Python implicitly supports all the above concepts inside the class syntax.
+				
+		1. Class:
+			A class is a blueprint or template used in creating objects.
+---------------------------------------------------------------------------
+Problem #7:
+-----------			
+	Create a class with the following functionalities.
+		class FileManager:
+				self.path:
+			def listFiles(self):
+			def createFile(self, filename):
+			def deleteFile(self, filename):
+			
+Problem #8:
+-----------			
+	Create a class with the following functionalities.
+		class DirectoryManager:
+				self.path:
+			def createDirectory(self, dirName):
+			def changeDirectory(self, dirName):
+			def removeDirectory(self, dirName):
+---------------------------------------------------------------------------

@@ -1,0 +1,77 @@
+Problem #1:
+-----------		
+	for the time being implement expr version for handling of command line arguments using sys.argv 
+		python exprt.py 10 + 20
+		python exprt.py 10 - 20
+		python exprt.py 10 * 20
+		python exprt.py 10 / 20
+		python exprt.py 10 // 20
+		python exprt.py 10 % 20
+		
+Problem #2:
+-----------			
+	Write a python program which works like a basic cat command 
+		cat enter -->
+			Input from keyboard and output on the screen 
+		cat filename -->
+			input from the file and output on the screen 
+		cat -n filename -->
+			input from the file and output on the screen along the line numbers.
+
+Problem #3:
+-----------			
+	Extend problem#2 so it can handle multiple files.
+	
+	Write a python program which works like a basic cat command 
+		cat filename file2 file3--> prints files one by one.
+		cat -n filename file2 file3-->
+			input from the multiple files and output on the screen along the line numbers.
+
+Problem #4:
+-----------			
+	Write a python program which works like a wc(word count) command. Just like cat command if no file name is given, read input from keyboard 
+		wc file 
+		line# word# char#  file
+		wc -l file 
+		line# file
+		wc -w file 
+		word# file
+		wc -c file 
+		char# file
+		
+Problem #5:
+-----------
+	Extend the problem #4 to handle multiple files 
+	wc output.txt simp.txt testOne.py
+	1   5  28 output.txt
+	7  33 221 simp.txt
+	9  22 264 testOne.py
+	17  60 513 total	
+	
+Problem #6:
+-----------
+	Write a Python program where, you pass commands as command line arguments using argparse which perform the following file handling operations 
+	
+	Python fileOps.py cfolder foldername --> creates a folder 
+	Python fileOps.py cfile filename --> creates a  file
+	Python fileOps.py rename filename/folder --> renames a file/folder
+	Python fileOps.py delete filename/folder --> removes a file/folder
+	Python fileOps.py copy filename/folder --> copies a file/folder
+Problem #7:
+-----------			
+	Create a class with the following functionalities.
+		class FileManager:
+				self.path:
+			def listFiles(self):
+			def createFile(self, filename):
+			def deleteFile(self, filename):
+			
+Problem #8:
+-----------			
+	Create a class with the following functionalities.
+		class DirectoryManager:
+				self.path:
+			def createDirectory(self, dirName):
+			def changeDirectory(self, dirName):
+			def removeDirectory(self, dirName):
+---------------------------------------------------------------------------
