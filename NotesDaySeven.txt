@@ -1,0 +1,134 @@
+	Different Types of Variables & Methods
+			Understanding instance, class, and static variables
+			Defining instance, class, and static methods
+		Magic/Dunder Methods
+			Understanding magic methods like init, str
+		Inheritance & Polymorphism
+			Implementing inheritance
+			Understanding polymorphism
+		Logging & Debugging Techniques
+			Using logging module
+			Debugging Python programs
+		Error Handling & Exception Strategies
+			Handling exceptions
+			Creating custom exceptions
+
+Different Types of Variables & Methods
+	Understanding instance, class, and static variables
+	Defining instance, class, and static methods
+	
+Methods:
+	instance method 	--> works with object/instance data 
+	class method 		--> works with class data 
+	static method 		--> used as utility function 
+	
+Encapsulation:
+    Bringing data + functions together is encapsulation in 
+    addition to restricting access
+        In languages like C++/Java/C# --> protected and private 
+        In Python -- all members are public by default
+                  -->No special keywords like protected and private
+        we follow naming convention
+            _name ==> protected
+            __name --> private     
+
+Magic/Dunder Methods
+	Understanding magic methods like init, str
+--------------------------------------------------------
+Inheritance & Polymorphism
+	Implementing inheritance
+	Understanding polymorphism
+
+    Inheritance:
+        creating a new class by extending the existing class
+
+        Parent/Base/Super class --> Existing class
+        Child/Derived/Sub class --> New class being created 
+
+        The Idea of Inheritance from OOP point of view is to 
+        extend the base class without modifying the existing class.
+
+        Open/Close principle:
+            Open for extension by closed for modification
+
+	Depending on number of classes involved in inheritance, we can classify inheritance as 
+		1. single inheritance --> one base class --> One derived class 
+		2. multiple or multi-part inheritance --> multiple base -> one derived
+		3. multlevel inheritance -> one base -> one derived -> one derived 
+		4. Hierarchial inheritance --> one base --> multiple derived
+		5. Hybrid Inheritance --> combination any of two above types
+		
+Polymorphism:
+-------------
+	The idea of polymorphism is , one name different behavior.
+
+	Remember like C++, Python does not support function/method overloading. that is two or more functions with same name with different arguments.
+
+	But Python, by default supports method overriding also referred to as run-time polymorphism.
+
+	What is method overriding:
+		method in derived class is re-written/defined by overriding base class methods.
+=========================================================================
+Logging & Debugging Techniques
+	Using logging module
+	Debugging Python programs
+--------------------------------------------------------------------------
+Logging levels: from lowest to highest 
+level 					Purpose
+-----------------------------------
+DEBUG 					Detailed info for debugging 
+INFO					General message (while app is running)
+WARNING					Something unexpected(not fatal)
+ERROR					Something failed (app can continue)
+CRITICAL				Severe Error, where the app may crash
+=========================================================================
+
+logging.debug('message')
+logging.info('message')
+logging.warning('message')
+logging.error('message')
+logging.critical('message')
+
+debugging using pdb (Python DeBugger):
+-------------------=
+	most commonly used keys 
+		n --> next (executing next statement)
+		s --> step into(executing step statement)
+		l --> list code
+		p var --> print variable 
+		q --> quit
+=================================================================
+	Error Handling & Exception Strategies
+		Handling exceptions
+		Creating custom exceptions	
+==================================================================
+Next Topic:
+	
+	Regular Expression
+		Pattern Matching , Flags
+			Using re module for pattern matching
+		Understanding regex flags
+		Match(), Search(), Finditer()
+			Finding matches using match(), search(), finditer()
+		Findall(), Split()
+			Using findall() for getting all matches
+			Splitting strings using split()
+		Group(), Start(), End() &
+		Working with match objects
+			Using group(), start(), end()
+		Span()
+			Understanding span of match
+==========================================================
+Comprehension, Iterators, Generator, Decorators , Lambda function
+	List Comprehensions
+		Creating lists using list comprehensions
+	Iterator and Generators
+		Understanding iterators and generators
+		Creating iterators and generators
+	Decorator
+		Understanding decorators
+		Creating and using decorators
+	Lambda function- map(), reduce() filter()
+		Understanding lambda functions
+		Using lambda functions with map(), reduce(), filter()
+==========================================================================

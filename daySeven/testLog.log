@@ -1,0 +1,10 @@
+2026-04-17 15:59:49,991 - INFO - App Started
+2026-04-17 15:59:49,992 - ERROR - Whatever message to be sent to the file
+2026-04-17 16:01:23,159 - INFO - App Started
+2026-04-17 16:01:23,161 - ERROR - Whatever message to be sent to the file
+2026-04-17 16:01:23,162 - ERROR - Exception Occured
+Traceback (most recent call last):
+  File "d:\wipro10April2026\loggingThree.py", line 17, in <module>
+    res = 1 / 0
+          ~~^~~
+ZeroDivisionError: division by zero
