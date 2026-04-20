@@ -1,0 +1,193 @@
+Day 9: 20-April-2026
+--------------------
+
+	Class Implementaion of Decorator should implement 
+		--> __call__():
+		Then the object of your class becomes a decorator.
+		
+	Lambda function- map(), reduce() filter()
+		Understanding lambda functions
+		Using lambda functions with map(), reduce(), filter()
+		
+	Data Structures and Operations
+		Overview of Data Structures
+		Classification of Data Structures: Linear vs Non-Linear
+		Linear Data Structures
+		Static Data Structures - Arrays
+		Dynamic Data Structures - Queue, Stack, Linked List 
+		Non-Linear Data Structures
+			Tree, Graph, Hash Tables, Sets, Heaps, Tries
+		
+	Arrays
+		Definition and characteristics
+		Implement Basic operations
+			Access
+			Insert
+			Delete
+			Update
+			Reverse
+			Slice
+		Sorting an Array - Brute Force Method
+		Searching an Array - Linear Search Method	
+	
+	Imlementing Linked List in Python
+		Definition and types: Single, Double, Circular
+			Basic operations: Insert at beginning, Insert at end, Insert at position, Delete node, Update node, Display
+		Implementing Stacks in Python
+			Definition and characteristics
+			Basic operations: Push, Pop, Peek, isEmpty
+==========================================================================
+	Lambda function- map(), reduce() filter()
+		Understanding lambda functions
+		Using lambda functions with map(), reduce(), filter()
+--------------------------------------------------------------------------
+Lambda functions:
+	A lambda function is a small anonymous(no name) function defined using lambda keyword instead of def keyword.
+	Lambda is used for short, throw away (fire and forget) function. These functions are used when you are passing function as an argument.
+	
+	Syntax:
+		lambda arguments: expression 
+		
+	lambda --> keyword to tell it is a lambda 
+	arguments --> comman separated list of input arguements 
+	Expression --> is a one line expression/single expression which returns a value/result.
+	
+	lambda a, b:  a + b 
+	or 
+	lambda a:  a * a 
+======================================================================
+Next Topic:
+	Data Structures and Operations
+		Overview of Data Structures
+		Classification of Data Structures: Linear vs Non-Linear
+		Linear Data Structures
+			Static Data Structures - Arrays
+			Dynamic Data Structures - Queue, Stack, Linked List 
+		Non-Linear Data Structures
+			Tree, Graph, Hash Tables, Sets, Heaps, Tries
+-----------------------------------------------------------------------
+Overview of Data Structures:
+----------------------------
+	Structuring your data so that you can organize(sort), processing, retrieving and storing the data in the memory(main memory) so the data can be used in an efficient manner.
+	
+	or 
+	
+	Structuring your data so that operations can be done in an efficient way.
+------------------------------------------------------------------------
+	Python as a language provides some basic data structures for storing the data like lists(Dynamic arrays/Linked Lists), tuple, set and dictionary (binary trees/ hash tables)
+	
+	As a programmer, it is your responsibility to understand how these data structures are implement or how it works. since this topic is on data structures you will be implementing your own set of data structures
+	
+	Data structures can be classified into 
+		Linear Data Structures
+			Arrays: Fixed sixe collections of similar data types stored in contiguous memory (by default supported in C/C++/Java)
+			Linked List:
+				collection of nodes(data + pointer) connected by the pointer called links (nodes linked to form a list)
+				Linked Lists could be Singe, Double or Circular 
+				
+			Stacks: LIFO (Last In First Out) principle used for 'Undo', 'Redo', Address bar in Browser(history), fileList in Recently opened files
+			Queues: FIFO (First In First Out) principle usually used in scheduling of tasks
+	
+		Non-Linear Data Structures:
+			Trees 
+				Hierarchical structures used in databases, filesystems (simpler on is binary trees, m-nary trees, balanced trees.. )
+			Graphs:
+				collection of edges(connections) and vertices(points/nodes) commonly used in netwroks, maps, GPS Navigation 
+			Hash Tables:
+				Store data in an associative fashion using keys and hash functions.
+
+	Operations that are performed normally:
+		1. Traversing --> Visiting each and every element/node in your DS 
+		2. Searching --> Finding the location of a specific data 
+		3. Insertion 
+		4. Deletion
+		6. Sorting 
+			The above mentioned  are commonly performed operations.
+---------------------------------------------------------------------------
+Terminologies used in Data Structures:
+--------------------------------------
+	Time - space complexities:
+	--------------------------
+		Usually denoted using Asymtotic notation:
+			O (n) --> Here Big Oh Notation
+
+	What is time complexity
+		Based on the statements used in your function(Algorithm - Independent of any programming language) you can calculate the amount of time taken.
+		
+		
+		for Example:
+			1. if your function has only sequential and conditional statements then we say it takes constant time O(1)  --> 
+		
+			2. If your functions has a loop where it runs for n number of times where n is the size/number of times your loop runs. here we talk about a single loop. O(n) --> Linear time 
+			
+			3. 
+	What is space complexity 
+		amount of data stored in the memory, while performing the task.		
+=========================================================================
+Let us implement a Dynamic Array:
+	--> Arrays are data structur(collection of similar type of data in contiguous memory).
+	---> Usually arrays are static in nature.
+		--> i.e., its size is fixed at the time of object creation.
+		
+	So When we talk about dynamic array:
+		size is flexible, increased as we insert elements. So how do we achieve it.
+		
+		we store extra variable in addition to current size, max size(capacity.. able to store values without reallocation of memory) and array variable.
+		So my class will have these data members
+			_size --> number of elements currently stored.
+			_capacity --> max 
+			_Array --> array storing the data.
+		
+	What is resizing?
+		ArrOne = DynamicArray()
+		# appended 10 elements with 10 values 
+		#what if i want to extend to 20 elements 
+		tempArray = DynamicArray()# allocate memory for 20 elements 
+		#copy ArrOne into tempArray(first 10 elements are copied)
+		#I can insert/append next 10 elements 
+		ArrOne = tempArray
+		
+Problem #1:
+----------
+	add a new method insert(pos, value) which performs data/value at the given pos.
+	
+Problem #2:
+----------
+	add a new method remove(value) which performs based data/value
+
+Complete the following:
+-----------------------
+	Arrays
+		Definition and characteristics
+		Implement Basic operations
+			Access --> __getitem__()
+			Insert --> insert()
+			Delete --> remove()
+Implement the rest:
+-------------------
+			Update  --> overwriting new value with old value 
+			Reverse --> You know this 
+			Slice --> 
+		Sorting an Array - Brute Force Method --> Bubble sort 
+		Searching an Array - Linear Search Method --> 
+==========================================================================
+Next Topic:
+-----------
+	Imlementing Linked List in Python
+		Definition and types: Single, Double, Circular
+			Basic operations: Insert at beginning, Insert at end, Insert at position, Delete node, Update node, Display
+		Implementing Stacks in Python
+			Definition and characteristics
+			Basic operations: Push, Pop, Peek, isEmpty
+--------------------------------------------------------------------------
+Problem #3:
+	Complete the following methods on the LinkedList class shared with you.
+
+		def insertEnd(self, data):
+			pass 
+
+		def insertPos(self, pos, data):
+			pass
+
+		def deleteData(self, data):
+			pass 
