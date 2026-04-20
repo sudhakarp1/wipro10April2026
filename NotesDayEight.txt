@@ -1,0 +1,161 @@
+Day 8: 18-April-2026
+--------------------
+	Regular Expression(re)
+		Pattern Matching , Flags
+			Using re module for pattern matching
+		Understanding regex flags
+		Match(), Search(), Finditer()
+			Finding matches using match(), search(), finditer()
+		Findall(), Split()
+			Using findall() for getting all matches
+			Splitting strings using split()
+		Group(), Start(), End() &
+		Working with match objects
+			Using group(), start(), end()
+		Span()
+			Understanding span of match
+==========================================================
+Regular expression:
+	When you say expression 
+		--> operators and operands This is what comes to our mind. This is in terms of mathematical expression
+		--> When People say, Regular Expression --> used in searching the text/data(usually string) for matching exact string, similar strings or in general string(here number, alphabets, symbols) are all treated the same.
+		--> Text could be single string or content of a file(loaded into your variable)
+		
+	Python provides Regular Expression module called re. The re module provides support for regular expression which are patterns used to match, search, replace or validate text.
+	
+	Where do we use them?
+		Regular Expression helps with 
+			extracting specifice patterns(similar string)
+			Replacing content 
+			splitting strings 
+			searching text 
+			validating input (phone number , email id, strong password...)
+			
+	re.match()
+	re.search()
+	re.finditer()
+		--> returns match object.
+		--> match object has its own methods like groups(), span(), start/end
+		
+	commonly used Regular expression symbols in Patterns:	
+	-----------------------------------------------------
+		Patterns means--> We are searching string...
+		
+			\d   --> Digit (0-9)
+			\w   --> Word characters(letters, digits, _underscore)
+			\s   --> White space
+			\D   --> other than digits 
+			\W   --> non-word character 
+			\S   --> non-space character
+			. 	 --> Any (single) Character
+			*	 --> Zero or more preceding character 
+			+	 --> One or more preceding character 
+			{n}  --> Exactly n times preceding character 
+			^    --> Start of string 
+			$	 --> End of string
+			[a-z] --> Character set (any single character between a-z)
+			[^a-z] -->Not from the Character set (Negation)
+			
+			\d+--> one or more digits 
+			
+			is* --> i followed by zero or more 's' preceding character 
+				i 
+				is 
+				isss
+				issssssssssssssss
+			is+ --> i followed by one or more 's' preceding character 
+				is 
+				isss
+				issssssssssssssss				
+			is{3} --> i followed by n number 's' preceding character 
+				isss
+			is{1,3} --> i followed by n number 's' preceding character 
+				is 
+				iss
+				isss
+		findall()
+		
+===========================================================================
+Comprehension, Iterators, Generator, Decorators , Lambda function
+	List Comprehensions
+		Creating lists using list comprehensions
+	Iterator and Generators
+		Understanding iterators and generators
+		Creating iterators and generators
+	Decorator
+		Understanding decorators
+		Creating and using decorators
+
+==========================================================================
+	List Comprehensions
+		Creating lists using list comprehensions
+
+	List comprehension:
+		one liner for creating a list with data/values 
+
+	var = [expression using cond & loops]
+==========================================================================
+Next Topic:
+-----------
+	Iterator and Generators
+		Understanding iterators and generators
+		Creating iterators and generators	
+==========================================================================
+Iterator objects in Pythong implements the iterator protocol:
+	-->  it has  __iter__() method implemented that returns the iterator object
+	-->  it has __next__() method implemented that returns next data/element from the iterator object and raises StopIteration to end the iteration(no elements/data) 
+==========================================================================	
+Next Topic:
+-----------
+	Decorator
+		Understanding decorators
+		Creating and using decorators	
+==========================================================================
+Decorator can be implemented using functions as well classes.
+
+	When it comes to function syntax:
+		we use combination of nesting functions and passing function as argument as well as return function 
+		
+	Let us explore the above concepts with example one by one and then we combine all to demonstrate decorator
+	
+	1. Nesting of functions
+		--> writing one function inside another function 
+		
+Next Topic:
+-----------	
+	Class Implementaion of Decorator should implement 
+		--> __call__():
+		Then the object of your class becomes a decorator.
+		This we will do it tomorrow
+==========================================================================
+	Lambda function- map(), reduce() filter()
+		Understanding lambda functions
+		Using lambda functions with map(), reduce(), filter()
+		
+	Data Structures and Operations
+		Overview of Data Structures
+		Classification of Data Structures: Linear vs Non-Linear
+		Linear Data Structures
+		Static Data Structures - Arrays
+		Dynamic Data Structures - Queue, Stack, Linked List 
+		Non-Linear Data Structures
+			Tree, Graph, Hash Tables, Sets, Heaps, Tries
+		
+	Arrays
+		Definition and characteristics
+		Implement Basic operations
+			Access
+			Insert
+			Delete
+			Update
+			Reverse
+			Slice
+		Sorting an Array - Brute Force Method
+		Searching an Array - Linear Search Method	
+	
+	Imlementing Linked List in Python
+		Definition and types: Single, Double, Circular
+		Basic operations: Insert at beginning, Insert at end, Insert at position, Delete node, Update node, Display
+		Implementing Stacks in Python
+		Definition and characteristics
+		Basic operations: Push, Pop, Peek, isEmpty
