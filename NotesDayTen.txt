@@ -1,0 +1,43 @@
+Day 10: 21-April-2026
+---------------------
+
+	Implement doubly linked List:
+	-----------------------------
+	
+class Node:
+    def __init__(self, data):
+        self.data, self.next, self.prev = data, None, None
+    
+    def __str__(self):
+        return f'data: {self.data} Prev: {self.prev} Next: {self.next}'
+
+class LinkedList:
+    def __init__(self):
+        self.head = None 
+		self.tail = None 
+
+    def insertBegining(self, data):
+		pass 
+		
+    def insertEnd(self, data):
+		pass 
+
+    def insertPos(self, pos, data):
+		pass 
+
+    def deleteData(self, data):
+		pass 
+
+    def dispForward(self):
+		pass 
+
+    def dispReverse(self):
+		pass 
+
+if __name__ == '__main__':
+    lstOne = LinkedList()
+
+===================================================================
+Those who have completed doubly linked list, understood try Circular --> singly circular or doubly circular
+	
+
