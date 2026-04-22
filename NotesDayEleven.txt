@@ -1,0 +1,113 @@
+Today we will understand Circular 
+
+	--> singly circular
+	--------------------
+		Complete the methods
+			def deletePos(self, pos):
+				pass
+
+			def deleteValue(self, value):
+				pass
+
+	--> doubly circular:
+	--------------------
+			class Node:
+				def __init__(self, data):
+					self.data, self.next, self.prev = data, None, None
+				
+				def __str__(self):
+					return f'data: {self.data} Prev: {self.prev} Next: {self.next}'
+
+			class LinkedList:
+				def __init__(self):
+					self.head = None 
+					self.tail = None 
+
+				def insertBegining(self, data):
+					pass 
+					
+				def insertEnd(self, data):
+					pass 
+
+				def insertPos(self, pos, data):
+					pass 
+
+				def deleteData(self, data):
+					pass 
+
+				def dispForward(self):
+					pass 
+
+				def dispReverse(self):
+					pass 
+
+			if __name__ == '__main__':
+				lstOne = LinkedList()
+=====================================================================
+	Implementing Stacks in Python
+		Definition and characteristics
+		Basic operations: Push, Pop, Peek, isEmpty
+		
+	Implementing Queues in Python
+		Definition and types: Simple, Circular, Priority, Double Ended
+		Basic operations: Enqueue, Dequeue, Peek, isEmpty
+		
+	Search Algorithms for the above Data Structures (Problem Type)
+		Linear Search (Strategy: Brute Force)
+		Binary Search (Strategy: Divide and Conquer)
+		Jump Search (Strategy: Divide and Conquer)
+		
+	Sort Algorithms for the above Data Structures (Problem Type)
+		Bubble Sort (Strategy: Exchanging)
+		Quick Sort (Strategy: Divide and Conquer)
+		Merge Sort (Strategy: Divide and Conquer)
+		Heap Sort (Strategy: Selection)
+-------------------------------------------------------------------------
+Implementing Stacks in Python
+	Definition and characteristics
+	Basic operations: Push, Pop, Peek, isEmpty
+	
+	Stacks:
+		Implements --> LIFO --> (Last In First Out)
+		Using Arrays/List as underlying data structures 
+			use the methods of the list class --> 
+			performing the operations on one end of the stack called top end
+			
+		Using Linked list:
+			Here self.head is replaced by self.top.
+				Push() --> add at the begining Linked List 
+				Pop() --> removing the end of the Linked List 
+				Peek() --> disp content of top node
+				isEmpty() --> self.top is None 
+				
+		Linked List is a generalized data structure, where you can perform variety of operations.(insert at begining,end, position), deleting (first, last, any position, based on value), reversing, sorting, searching...
+		
+		But when it comes to Stack:
+			We can perform operation on one end only called top end.
+			No matter what operation we perform, it is of O(1) --> it will involve only sequential and conditional statements only. It does not involve --> Loops or Recursion.
+=========================================================================
+Next Topic:	
+	Implementing Queues in Python
+		Definition and types: Simple, Circular, Priority, Double Ended
+		Basic operations: Enqueue, Dequeue, Peek, isEmpty
+--------------------------------------------------------------------------
+Queue is a data structure which implements
+	--> FIFO --> First In First Out 
+
+	Can be implemented using list(built-in)
+	Can also be implemented using linked list(User Defined)	
+	
+		Here we use two variables:
+			front --> end where deletion is done (removing)
+			rear --> end where insertion is done (adding)
+		
+		In Queues:
+			insertion is called --> enqueue()
+			deletion is called --> dequeue()
+	
+	Lists can be of different types:
+		1. Simple --> simple enqueue() and dequeue()
+		2. circular --> You know what is circular (both front & rear pointing to same location)
+		3. Priority --> enqueue() and dequeue() based on priority (I can say smallest/largest element having highest element)
+		4. Double Ended(deque) --> Perform operations on both ends (enqueue(insertion) at rear and front, dequeue(deleting) is done on both ends i.e., front and rear)
+--------------------------------------------------------------------------	
