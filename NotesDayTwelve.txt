@@ -1,0 +1,115 @@
+Day 12: 23-April-2026
+---------------------
+	Lists can be of different types:
+		1. Simple --> simple enqueue() and dequeue()
+		2. circular --> You know what is circular (both front & rear pointing to same location)
+		3. Priority --> enqueue() and dequeue() based on priority (I can say smallest/largest element having highest element)
+		4. Double Ended(deque) --> Perform operations on both ends (enqueue(insertion) at rear and front, dequeue(deleting) is done on both ends i.e., front and rear)
+
+	Search Algorithms for the above Data Structures (Problem Type)
+		Linear Search (Strategy: Brute Force)
+		Binary Search (Strategy: Divide and Conquer)
+		Jump Search (Strategy: Divide and Conquer)
+		
+	Sort Algorithms for the above Data Structures (Problem Type)
+		Bubble Sort (Strategy: Exchanging)
+		Quick Sort (Strategy: Divide and Conquer)
+		Merge Sort (Strategy: Divide and Conquer)
+		Heap Sort (Strategy: Selection)
+		
+	Implementing Tree in Python
+		Definition and types: Binary, AVL, Red-Black, Tries, Heaps
+		Basic operations: Insert, Search, Delete, Traversal (In-order, Pre-order, Post-order)
+======================================================================		
+circular --> You know what is circular (both front & rear pointing to same location)
+
+Priority --> enqueue() and dequeue() based on priority (I can say smallest/largest element having highest priority)
+=============================================================================
+min = [] --> smallest element and pop --> for normal array/list operation 
+--->
+	In a queue --> the front element will be dequeued first 
+		if the value is high priority --> insert at the begining 
+	
+	I will be using heapq built-in module of python which supports priority queue using a binary heap 
+		--> by defaule is min heap (smallest element at the begining or root node (trees point of view))
+		-->
+
+
+	Double Ended(deque) --> Perform operations on both ends (enqueue(insertion) at rear and front, dequeue(deleting) is done on both ends i.e., front and rear)
+
+	from collections import deque 
+			here deque (double ended queue)
+		or 
+		
+			list methods:
+				lst.insert(0, data) #enqueueFront()
+				lst.append(data) ##enqueueRear()
+				
+				lst.pop(0) #dequeueFront()
+				lst.pop() #dequeueRear()
+			or 
+				deque -->
+					appendLeft(data)#enqueueFront()
+					append(data)#enqueueRear()
+					
+					popleft()#dequeueFront()
+					pop() #dequeueRear()
+					
+=============================================================================N			
+	Search Algorithms for the above Data Structures (Problem Type)
+		Linear Search (Strategy: Brute Force)
+		Binary Search (Strategy: Divide and Conquer)
+		Jump Search (Strategy: Divide and Conquer)
+	------------>
+	Linear Search (Strategy: Brute Force):
+		finding or searching for an element in a collection. Here we are talking about element stored in an ordered collection, Could be your Array (user-defined Dynamic Array) or existing collection like list.
+		
+		Logic:
+			Check for every element from first to last only by one until you find your target.
+		Best: O(1)
+		Worst: O(n)
+		
+	Binary Search:	(Divide and conquer)
+		Recursively/ repeatedly divide the sorted array by half 
+		Best: O(1)
+		Worst: O(log n)			
+		
+	Jump Search:(Divide and conquer)
+		Jump ahead by fixed number of steps(sqrt(n)) to split the array into blocks, then do linear search in that block.
+
+		Works best on sorted arrays.
+		
+		Best: O(1)
+		Worst: O(sqrt(n))
+		
+	
+	Bubble Sort:
+		Best: O(n) --> already sorted --> isSwapped flag is used 
+		Worst: O(n ** 2) --> 
+		
+	Quick Sort:
+		Best: O(n log n) if pivot element is properly chosen 
+		Worst: O(n ** 2) (because of bad pivot choice)
+
+	Merge Sort:
+		Always: O(n log n)
+		
+	Heap Sort:
+		
+===========================================================================
+Next Topic:
+-----------		
+	Implementing Tree in Python
+		Definition and types: Binary, AVL, Red-Black, Tries, Heaps
+		Basic operations: Insert, Search, Delete, Traversal (In-order, Pre-order, Post-order)		
+				
+	Implementing Graph in Python
+		Definition and types: Directed, Undirected, Weighted, Unweighted, Directed Acyclic
+		Basic operations: Add Vertex, Add Edge, Display	
+		
+	Tree and Graph (Collection) Algorithms (Problem Type)
+		Breadth-First Search (Strategy: Queue)
+		Depth-First Search (Strategy: Stack)
+		Union-Find Algorithm for Cycle Detection (Strategy: Disjoint Set)	
+		
+=============================================================================
