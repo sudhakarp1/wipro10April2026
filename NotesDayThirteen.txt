@@ -1,0 +1,70 @@
+Day 13: 23-April-2026
+---------------------
+	
+	Implementing Tree in Python
+		Definition and types: Binary, AVL, Red-Black, Tries, Heaps
+		Basic operations: Insert, Search, Delete, Traversal (In-order, Pre-order, Post-order)		
+				
+=========================================================================
+Trees:
+	Binary Trees:
+		Every node can have maximum of 2 nodes and they are connected in an hierarchial structure (rather than linear)
+		first node is referred to as root node.
+		Nodes with no child is referred to as leaf node. (leaves)
+		Nodes with a parent and child or children is referred to as intermediate nodes.
+		
+		Height --> of a tree
+			count of intermediate nodes from root to the farthest leaf node 
+			
+
+	Complete Binary Tree:
+		Insert using level order 
+		filling the first available spot from left to right on same level. If all nodes are filled at current level, we move to next level
+	
+	Binary Search Tree:
+		Binary tree where binary search algorithm can be implemented.(Eliminative search)
+	Data for my BST:
+		[50, 30, 80, 10, 20, 60, 100, 54, 58, 52, 70, 65, 78, 5, 15, 25]
+		
+	
+AVL:
+	Its a self balancing binary search tree(BST) using balancing factor(height factor - by calculating diffence in height between right and left tree)
+	
+		balance factor = height(left) - height(right)
+		
+		The balancing must be -1, 0 or +1
+		if not 
+			Re-balancing must be done.
+			By performing rotation --> where balance is restored.
+			
+	Similarly: 
+		Explore Red-Black trees, Heaps, Tries		
+=========================================================================
+Next Topic:
+-----------				
+	Implementing Graph in Python
+		Definition and types: Directed, Undirected, Weighted, Unweighted, Directed Acyclic
+		Basic operations: Add Vertex, Add Edge, Display	
+		
+	Tree and Graph (Collection) Algorithms (Problem Type)
+		Breadth-First Search (Strategy: Queue)
+		Depth-First Search (Strategy: Stack)
+		Union-Find Algorithm for Cycle Detection (Strategy: Disjoint Set)
+	
+	Graph Algorithms (Problem Type)
+		Dijkstra’s Algorithm (Strategy: Greedy Method)
+		Floyd-Warshall Algorithm (Strategy: Dynamic Programming)
+		Kruskal’s Minimum Spanning Tree Algorithm (Strategy: Greedy Method)
+		Bellman-Ford Algorithm (Strategy: Dynamic Programming)
+
+	Strings and Char Arrays in Python
+		Basic Operations: Create Strings, Concetanate Strings, Reverse String, Extract parts of string
+		
+	Pattern Searching Algorithms (Problem Type)
+		Naive Pattern Searching (Strategy: Brute Force)
+		KMP Algorithm (Strategy: Finite Automata)
+		Rabin-Karp Algorithm (Strategy: Hashing)
+		Boyer Moore Algorithm (Strategy: Heuristic)
+	
+=========================================================================
+
