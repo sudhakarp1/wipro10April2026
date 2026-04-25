@@ -1,0 +1,80 @@
+Day 14: 25-April-2026
+---------------------
+	Implementing Graph in Python
+		Definition and types: Directed, Undirected, Weighted, Unweighted, Directed Acyclic
+		Basic operations: Add Vertex, Add Edge, Display	
+==================================================================		
+	Tree and Graph (Collection) Algorithms (Problem Type)
+		Breadth-First Search (Strategy: Queue)
+		Depth-First Search (Strategy: Stack)
+		Union-Find Algorithm for Cycle Detection (Strategy: Disjoint Set)
+	
+	Graph Algorithms (Problem Type)
+		Dijkstra’s Algorithm (Strategy: Greedy Method)
+		Floyd-Warshall Algorithm (Strategy: Dynamic Programming)
+		Kruskal’s Minimum Spanning Tree Algorithm (Strategy: Greedy Method)
+		Bellman-Ford Algorithm (Strategy: Dynamic Programming)
+
+	Strings and Char Arrays in Python
+		Basic Operations: Create Strings, Concetanate Strings, Reverse String, Extract parts of string
+		
+	Pattern Searching Algorithms (Problem Type)
+		Naive Pattern Searching (Strategy: Brute Force)
+		KMP Algorithm (Strategy: Finite Automata)
+		Rabin-Karp Algorithm (Strategy: Hashing)
+		Boyer Moore Algorithm (Strategy: Heuristic)
+========================================================================
+	Tree and Graph (Collection) Algorithms (Problem Type)
+		Breadth-First Search (Strategy: Queue)
+		Depth-First Search (Strategy: Stack)
+		Union-Find Algorithm for Cycle Detection (Strategy: Disjoint Set)
+
+Breadth-First:
+	Explore nodes level by level (Neighbours first policy)
+	We use Queues to keep track of first visited and processed
+	
+	Rather than search --> You can treat it as a way of traversing the whole graph (visiting each and every element atleast once.)
+	
+	starting at one node(source) --> visit all nearby nodes and then keep expanding outwards until all nodes are visited.
+	Where is this used?
+		Finding connected nodes 
+		Traversals in trees (BF traversal)
+		Shortest path in unweighted graphs 
+		
+Depth-First Search (Strategy: Stack):
+------------------------------------	
+	
+
+Union-Find Algorithm for Cycle Detection (Strategy: Disjoint Set):
+------------------------------------------------------------------
+	Union of sets (disjoint sets)
+	find()
+		--> This union of sets --> 
+			Which tree should be joined into which tree --> which node will be considered parent.
+				
+		Core Purporse:
+			The idea here is a small tree joining a large tree. 
+			Here smaller set joining into larger set(universal set)
+			
+		Ranking:
+			Could be base on height(approx)
+			Could be base on size(fixed)
+========================================================================
+Next Topic:
+-----------
+	Graph Algorithms (Problem Type)
+		Dijkstra’s Algorithm (Strategy: Greedy Method)
+		Floyd-Warshall Algorithm (Strategy: Dynamic Programming)
+		Kruskal’s Minimum Spanning Tree Algorithm (Strategy: Greedy Method)
+		Bellman-Ford Algorithm (Strategy: Dynamic Programming)
+-------------------------------------------------------------------------
+Dijkstra’s Algorithm (Strategy: Greedy Method):
+	To find the shortest path from a single source node to all other nodes.
+	strategy of this algorithm is greedy approach.
+		At each step, choose the best immediate option(weight, distance(distance in application like map is different))
+		
+	--> Always pick the closes unvisited node, and update distances to its neighbors 
+	
+	Works fine when all edges weights are non-negative 
+	
+	
