@@ -1,0 +1,124 @@
+Day 15: 27-April-2026
+---------------------	
+	Graph Algorithms (Problem Type)
+		Floyd-Warshall Algorithm (Strategy: Dynamic Programming)
+		Kruskal’s Minimum Spanning Tree Algorithm (Strategy: Greedy Method)
+		Bellman-Ford Algorithm (Strategy: Dynamic Programming)
+		
+	Strings and Char Arrays in Python
+		Basic Operations: Create Strings, Concetanate Strings, Reverse String, Extract parts of string
+		
+	Pattern Searching Algorithms (Problem Type)
+		Naive Pattern Searching (Strategy: Brute Force)
+		KMP Algorithm (Strategy: Finite Automata)
+		Rabin-Karp Algorithm (Strategy: Hashing)
+		Boyer Moore Algorithm (Strategy: Heuristic)	
+
+	Computational Algorithms (Problem Type)
+		Tower of Hanoi (Strategy: Recursion)
+		Travelling Salesman Problem (Strategy: Dynamic Programming)
+		Job Sequencing Problem (Strategy: Greedy Method)
+		Fractional Knapsack Problem (Strategy: Greedy Method)
+==============================================================================
+Floyd-Warshall Algorithm (Strategy: Dynamic Programming)
+		
+Kruskal’s Minimum Spanning Tree Algorithm (Strategy: Greedy Method)
+	minimum spanning tree:
+		If you have a graph with V number of vertices:
+			we keep adding V-1 number of edges to create a new graph which results in a tree.
+			Graphs may have cycle, where as trees do not.
+			
+		If you sum weights on all the edges you get minimum cost.
+		
+Bellman-Ford Algorithm (Strategy: Dynamic Programming):
+-------------------------------------------------------
+	This is used when 
+		Graph has negative weights 
+		If you want to confirm the existence of negative cycle 
+		
+	Idea:
+		Instead of using the greedy approach like Dijkstra for find the shortest path.
+		Steps:
+			1. Relaxes all edges repeatedly 
+			2. Gradually improves shortest distances 
+			3. After iterating V-1 iterations, shortest path is gauranteed.
+			
+			After V-1 iterations :
+			Do one more iteration, and If any edge still improves distance then negative cycle exists if not improvements then no negative cycle exists.			
+==========================================================================
+Relaxation means:
+	"Can I improve the current known shortest distance?"
+
+	For an edge (u → v) with weight w:
+	if dist[u] + w < dist[v]:
+		dist[v] = dist[u] + w
+
+	Strings and Char Arrays in Python
+		Basic Operations: Create Strings, Concetanate Strings, Reverse String, Extract parts of string
+		
+	Pattern Searching Algorithms (Problem Type)
+		Naive Pattern Searching (Strategy: Brute Force)
+		KMP Algorithm (Strategy: Finite Automata)
+		Rabin-Karp Algorithm (Strategy: Hashing)
+		Boyer Moore Algorithm (Strategy: Heuristic)	
+=========================================================================
+Pattern Searching Algorithms (Problem Type)
+	finding or searching for smaller strings(sub string) in a larger string.
+	
+	Naive Pattern Searching (Strategy: Brute Force):
+========================================================================	
+ text = 'typing a lengthy string. this is lenghty. is this lengthy'
+ pattern = 'length'
+	                                                   i
+	typing a lengthy string. this is lenghty. is this lengthy
+	                                                   length
+	                                                   j
+
+
+KMP Algorithm (Strategy: Finite Automata):
+------------------------------------------
+
+Rabin-Karp Algorithm (Strategy: Hashing)
+
+Boyer Moore Algorithm (Strategy: Heuristic)	
+		Using Bad Character Heuristic
+==============================================================
+Next Topics for today:
+----------------------
+	Computational Algorithms (Problem Type)
+		
+
+		Job Sequencing Problem (Strategy: Greedy Method)
+		Fractional Knapsack Problem (Strategy: Greedy Method)
+===================================================================
+Tower of Hanoi (Strategy: Recursion)
+
+Travelling Salesman Problem (Strategy: Dynamic Programming)
+	using dynamic programm(DP) --> memoization techniq is used here(remembering or storing the previously calculated results, so that you dont have to re-calculate)
+	
+		and 
+	bit masking for keeping track of the visited cities.
+		0001, 0 --> Only city 0 visited 
+		0011, go to 1 from 0 city 
+		0101 --> go to city 2 from city 0 
+		
+		1111 --> return the cost to go back to 0
+	
+
+				fibo(4) --> fibo(3) + fibo(2)
+				 |
+				 |--> fibo(3)
+				 |	   |
+				 |	   | --> fibo(2) + fibo (1)
+				 |			   |
+				 |			   | --> fibo(1) + fibo(0)	
+				 |
+				 | --> fibo(2) + fibo (1)
+				        |
+						| --> fibo(1) + fibo(0)
+
+====================================================================
+Next Topics:
+	Job Sequencing Problem (Strategy: Greedy Method)
+	Fractional Knapsack Problem (Strategy: Greedy Method)
+=================================================================
