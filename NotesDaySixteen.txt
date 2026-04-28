@@ -1,0 +1,72 @@
+Next Topics:
+	Job Sequencing Problem (Strategy: Greedy Method)
+	Fractional Knapsack Problem (Strategy: Greedy Method)
+
+Dynamic Programming Algorithms (Strategy)
+	Knapsack Problem (Problem Type: Optimization)
+	Longest Common Subsequence (Problem Type: Subsequence)
+	Optimal Binary Search Tree (Problem Type: Tree)
+	Longest Increasing Subsequence (Problem Type: Subsequence)
+
+Backtracking Algorithms (Strategy)
+	The Knight’s tour problem (Problem Type: Path Finding)
+	Rat in a Maze (Problem Type: Path Finding)
+	N Queen Problem (Problem Type: Arrangement)
+	Subset Sum (Problem Type: Subset)
+=================================================================
+Job Sequencing Problem (Strategy: Greedy Method):
+
+	Jobs: j1(100, 2), j2(19,1), j3(40, 2), j4(30,1), j5(55, 3)
+	Step 1:
+		[(j1,100, 2), (j2,19,1), (j3,40, 2), (j4,30,1), (j5,55, 3) ]
+		sorting in descending order based on profit 
+		[(j1,100, 2), (j5,55, 3), (j3,40, 2),  (j4,30,1), (j2,19,1)]	
+	Deadline: max() --> 3 Units 
+		
+Fractional Knapsack Problem (Strategy: Greedy Method):
+-------------------------------------------------------
+Items(val, wt): (60, 10), (100, 20), (120, 30)
+capacity: 50
+Ratios	--> 6, 5, 4
+Pick value with ratio:
+		take (60, 10)--> fill 10 --> remaining 50 - 10 --> 40
+		take (100, 20) --> fill 20 --> 40 - 20 --> 20 
+		take (120, 30) --> fill 20 --> 80 --> 20 -20 --> 0
+				--> 60 + 100 + 80(fractional) --> 	240
+		
+Knapsack Problem (0/1 Knapsack)(Problem Type: Optimization)
+-----------------------------------------------------------
+			
+Longest Common Subsequence (Problem Type: Subsequence):
+------------------------------------------------------
+s1 = 'ABCD' 
+s2 = 'DACD' ==> LCS  =3 
+
+==================================================================
+Optimal Binary Search Tree:
+	Given a sorted array keys[0.. n-1] of search keys and an array freq[0.. n-1] of frequency counts, where freq[i] is the number of searches for keys[i]. Construct a binary search tree of all keys such that the total cost of all the searches is as small as possible.
+
+Longest Increasing Subsequence :
+--------------------------------
+
+Next topic:
+-----------
+	Template for backtracking algo:
+	
+		def backtrack(state):
+			if goal_reached(state):
+				record_solution()
+				return
+			for choice in choices:
+				if valid(choice, state):
+					make_choice(choice)
+					backtrack(state)
+					undo_choice(choice)   # ← backtrack
+	
+	
+	Backtracking Algorithms (Strategy)
+		The Knight’s tour problem (Problem Type: Path Finding)
+		Rat in a Maze (Problem Type: Path Finding)
+		N Queen Problem (Problem Type: Arrangement)
+		Subset Sum (Problem Type: Subset)
+
